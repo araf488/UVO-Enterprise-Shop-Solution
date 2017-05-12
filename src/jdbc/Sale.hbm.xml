@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 10, 2017 7:01:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jdbc.Sale" table="sale" catalog="projectuvo" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="pid" type="java.lang.Integer">
+            <column name="pid" />
+        </property>
+        <property name="custname" type="string">
+            <column name="custname" length="100" />
+        </property>
+        <property name="sprice" type="java.lang.Double">
+            <column name="sprice" precision="22" scale="0" />
+        </property>
+        <property name="qty" type="java.lang.Integer">
+            <column name="qty" />
+        </property>
+        <property name="sdate" type="string">
+            <column name="sdate" length="100" />
+        </property>
+        <property name="warranty" type="string">
+            <column name="warranty" length="100" />
+        </property>
+        <property name="totalprice" type="java.lang.Double">
+            <column name="totalprice" precision="22" scale="0" />
+        </property>
+        <property name="productname" type="string">
+            <column name="productname" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

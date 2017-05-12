@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee.NewEmployeeController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #06BBDA; -fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <AnchorPane layoutX="97.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="280.0" layoutY="14.0" text="New Employee">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="297.0" layoutY="130.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <children>
+                  <GridPane layoutX="251.0" layoutY="177.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="281.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0" prefWidth="123.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="288.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="btnSaveEmployee" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#btnSaveEmployeeAction" prefHeight="60.0" prefWidth="55.0" ripplerFill="WHITE" text=" " textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="27.0" right="10.0" />
+                           </GridPane.margin>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/1491514144_user-group-new.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <DatePicker fx:id="dateField" prefHeight="30.0" prefWidth="180.0" promptText="Select Join Date" style="-fx-border-color: #06BBDA;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" top="5.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <JFXTextField fx:id="unameField" labelFloat="true" promptText="User Name" style="-fx-border-color: #06BBDA;">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="fullnameField" labelFloat="true" promptText="Full Name" style="-fx-border-color: #06BBDA;" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="mobileField" labelFloat="true" promptText="Contact Number" style="-fx-border-color: #06BBDA;" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="emailField" labelFloat="true" promptText="Email" style="-fx-border-color: #06BBDA;" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextArea fx:id="addressField" labelFloat="true" promptText="Pernamnent Address" style="-fx-border-color: #06BBDA;" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="salaryField" labelFloat="true" promptText="Salary" style="-fx-border-color: #06BBDA;" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="positionField" prefHeight="25.0" prefWidth="192.0" promptText="Position" style="-fx-border-color: #06BBDA;" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" top="5.0" />
+                           </GridPane.margin>
+                        </JFXComboBox>
+                        <ImageView fx:id="imgView" fitHeight="153.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" top="5.0" />
+                           </GridPane.margin>
+                           <image>
+                              <Image url="@../image/rifat.jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnImage" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#btnImageOnAction" prefHeight="58.0" prefWidth="13.0" text=" " textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="190.0" />
+                           </GridPane.margin>
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/1491514963_sodipodi.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="btnClose" alignment="TOP_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#btnCloseAction" prefHeight="20.0" prefWidth="20.0" ripplerFill="WHITE" style="-fx-background-radius: 2000;" text=" " textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/close_new.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

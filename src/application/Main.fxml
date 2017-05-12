@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <BorderPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <center>
+            <AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="1241.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane prefHeight="592.0" prefWidth="1231.0" style="-fx-background-radius: 10;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <top>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </top>
+                     <bottom>
+                        <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+                     </bottom>
+                     <center>
+                        <SplitPane dividerPositions="0.7428803905614321" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView layoutX="130.0" layoutY="116.0" prefHeight="490.0" prefWidth="910.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                          </items>
+                        </SplitPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="100.0" prefWidth="1366.0" style="-fx-background-color: #ccffcc;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" layoutX="138.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="100.0" prefWidth="1319.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="UVO" textFill="#e1d3d3">
+                                 <font>
+                                    <Font name="Goudy Old Style Bold" size="36.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="80.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="eco ideas" textFill="#02c640">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="30.0" left="160.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Logged in user:" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Goudy Old Style Italic" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="140.0" top="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="loggedUser" prefHeight="36.0" prefWidth="104.0" text="araf" textFill="#26b94b" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Segoe Print" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="8.0" left="240.0" top="8.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <JFXButton fx:id="btnLogout" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#btnLogoutOnAction" text=" " GridPane.columnIndex="2">
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/1491513237_system-log-out.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <GridPane.margin>
+                                    <Insets left="350.0" />
+                                 </GridPane.margin>
+                              </JFXButton>
+                              <ImageView fitHeight="99.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/unnamed.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="568.0" prefWidth="125.0" style="-fx-background-color: #00AFF0;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="10.0" fitWidth="125.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="home" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1.0" layoutY="32.0" onAction="#homeClick" prefHeight="80.0" prefWidth="110.0" style="-fx-background-radius: 10;" text="Home" textFill="WHITE" AnchorPane.leftAnchor="8.0">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/1491513197_go-home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="10.0" fitWidth="125.0" layoutX="29.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="stock" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1.0" layoutY="156.0" onAction="#stockClick" prefHeight="80.0" prefWidth="110.0" style="-fx-background-radius: 10;" text="Stock" textFill="WHITE" AnchorPane.leftAnchor="8.0">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/1491513450_handle4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="10.0" fitWidth="125.0" layoutX="29.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="employee" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1.0" layoutY="407.0" onAction="#employeeClick" prefHeight="80.0" prefWidth="110.0" style="-fx-background-radius: 10;" text="Employee" textFill="WHITE" AnchorPane.leftAnchor="8.0">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/1491513788_hierarchy.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="10.0" fitWidth="125.0" layoutX="28.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="sale" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1.0" layoutY="279.0" onAction="#saleClick" prefHeight="80.0" prefWidth="110.0" style="-fx-background-radius: 10;" text="Sale" textFill="WHITE" AnchorPane.leftAnchor="8.0">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/1491513564_Line_ui_icons_Svg-10.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="10.0" fitWidth="125.0" layoutX="29.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/btnBreak.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </left>
+         <bottom>
+            <AnchorPane prefHeight="54.0" prefWidth="1366.0" style="-fx-background-color: #00AFF0;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="72.0" fitWidth="117.0" layoutX="1166.0" layoutY="-52.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <image>
+                        <Image url="@../image/home_cleaning_loading.gif" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

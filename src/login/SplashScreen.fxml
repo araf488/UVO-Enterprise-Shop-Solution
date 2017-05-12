@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" prefHeight="416.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.SplashScreenController">
+   <children>
+      <ImageView fx:id="imgview" fitHeight="470.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/dove-windows-remix-1920x1080-wallpaper547308.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane" prefHeight="459.0" prefWidth="700.0">
+         <children>
+            <ImageView fitHeight="250.0" fitWidth="500.0" layoutX="183.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/loading.gif" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="272.0" layoutY="376.0" text="Welcome to" textFill="WHITE">
+               <font>
+                  <Font name="Goudy Stout" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="575.0" layoutY="356.0" prefHeight="57.0" prefWidth="111.0" text="UVO" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Italic" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

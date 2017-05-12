@@ -1,0 +1,52 @@
+public List<Movies> getSingleValue(int id){
+//    String hql = "FROM Movies E WHERE E.id = :id";
+    
+    Query query = getSessionFactory().openSession().createQuery("FROM Movies E WHERE E.id = :id");
+    query.setParameter("id", id);
+    List results = query.list();
+        return results;
+    
+    }
+
+@FXML
+    private void btnActionMethod(ActionEvent event) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("jdbc/spring-jdbc.xml");
+
+        HibernateDao hd = (HibernateDao)context.getBean("hibernateDao");
+
+         List <Movies> list = hd.getSingleValue(17);
+        for (Movies s: list) {
+            System.out.println(s.getId()+" " +s.getTitle()+" " +s.getGenre()+""+s.getPoster());
+            myImg = s.getPoster();
+            imageView.setImage(image);
+        }
+    }
+
+@FXML
+    private void btnActionMethod(ActionEvent event) throws IOException {
+        ApplicationContext context = new ClassPathXmlApplicationContext("jdbc/spring-jdbc.xml");
+
+        HibernateDao hd = (HibernateDao) context.getBean("hibernateDao");
+
+        List<Movies> list = hd.getSingleValue(17);
+        for (Movies s : list) {
+            System.out.println(s.getId() + " " + s.getTitle() + " " + s.getGenre() + "" + s.getPoster());
+            myImg = s.getPoster();
+            ByteArrayInputStream bis = new ByteArrayInputStream(myImg);
+            BufferedImage bimg = ImageIO.read(bis);
+            int width = bimg.getWidth();
+            int height = bimg.getHeight();
+            image = SwingFXUtils.toFXImage(bimg, null);
+            
+            imageView.setImage(image);
+        }
+    }
+public void convertToJavaFXImage(byte[] raw, final int width, final int height) {
+        image = new WritableImage(width, height);
+        try {
+            ByteArrayInputStream bis = new ByteArrayInputStream(myImg);
+            BufferedImage read = ImageIO.read(bis);
+            image = SwingFXUtils.toFXImage(read, null);
+        } catch (IOException ex) {
+        }
+    }

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 10, 2017 6:56:28 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jdbc.Product" table="product" catalog="projectuvo" optimistic-lock="version">
+        <id name="pid" type="java.lang.Integer">
+            <column name="pid" />
+            <generator class="identity" />
+        </id>
+        <property name="pname" type="string">
+            <column name="pname" length="200" />
+        </property>
+        <property name="qty" type="java.lang.Integer">
+            <column name="qty" />
+        </property>
+        <property name="pprice" type="java.lang.Double">
+            <column name="pprice" precision="22" scale="0" />
+        </property>
+        <property name="sprice" type="java.lang.Double">
+            <column name="sprice" precision="22" scale="0" />
+        </property>
+        <property name="pdescription" type="string">
+            <column name="pdescription" length="200" />
+        </property>
+        <property name="suppliername" type="string">
+            <column name="suppliername" length="100" />
+        </property>
+        <property name="brandname" type="string">
+            <column name="brandname" length="100" />
+        </property>
+        <property name="catname" type="string">
+            <column name="catname" length="100" />
+        </property>
+        <property name="unit" type="string">
+            <column name="unit" length="100" />
+        </property>
+        <property name="warranty" type="string">
+            <column name="warranty" length="100" />
+        </property>
+        <property name="pdate" type="string">
+            <column name="pdate" length="100" />
+        </property>
+        <property name="pimage" type="binary">
+            <column name="pimage" />
+        </property>
+    </class>
+</hibernate-mapping>

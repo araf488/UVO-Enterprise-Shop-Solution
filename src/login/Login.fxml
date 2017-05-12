@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="410.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="525.0" prefWidth="750.0" style="-fx-background-color: #00b35c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="620.0" prefWidth="700.0">
+               <children>
+                  <AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #00e677; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="117.0" layoutY="252.0" text="UVO " textFill="WHITE">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <AnchorPane layoutX="366.0" layoutY="79.0" prefHeight="281.0" prefWidth="293.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                           <children>
+                              <Label layoutX="104.0" layoutY="14.0" text="SIGN IN">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <GridPane layoutX="3.0" layoutY="55.0" prefHeight="215.0" prefWidth="290.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <JFXTextField fx:id="uname" focusColor="#c32d2d" labelFloat="true" promptText="Username" unFocusColor="#3aa44a">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXPasswordField fx:id="pass" focusColor="#c32d2d" labelFloat="true" promptText="Password" unFocusColor="#3aa44a" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </GridPane.margin>
+                                    </JFXPasswordField>
+                                    <Label alignment="CENTER" text="select user type" textFill="#265b33" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="170.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="userChoice" prefHeight="25.0" prefWidth="129.0" promptText="Select User Role" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="30.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ComboBox>
+                                    <JFXButton fx:id="login" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#signin" prefHeight="43.0" prefWidth="3.0" ripplerFill="#00e677" text=" " textFill="WHITE" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="220.0" right="5.0" top="10.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/1491514373_Log%20Out.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </AnchorPane>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="104.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/unnamed.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="190.0" layoutY="260.0" text="eco ideas" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="126.0" layoutY="298.0" text="Eco-conscious" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe Script Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="73.0" layoutY="324.0" text=" Products and Organization" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe Script Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnClose" alignment="TOP_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#btnCloseAction" prefHeight="20.0" prefWidth="20.0" ripplerFill="WHITE" style="-fx-background-radius: 2000;" text=" " textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/close_new.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 28, 2017 5:17:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jdbc.Employee" table="employee" catalog="projectuvo">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="uname" type="string">
+            <column name="uname" length="45" />
+        </property>
+        <property name="fullname" type="string">
+            <column name="fullname" length="100" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="500" />
+        </property>
+        <property name="position" type="string">
+            <column name="position" length="45" />
+        </property>
+        <property name="salary" type="java.lang.Double">
+            <column name="salary" precision="22" scale="0" />
+        </property>
+        <property name="joindate" type="string">
+            <column name="joindate" length="45" />
+        </property>
+        <property name="image" type="binary">
+            <column name="image" />
+        </property>
+    </class>
+</hibernate-mapping>

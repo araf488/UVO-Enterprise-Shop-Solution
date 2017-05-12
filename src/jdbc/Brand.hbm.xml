@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 28, 2017 5:17:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jdbc.Brand" table="brand" catalog="projectuvo">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="suppliername" type="string">
+            <column name="suppliername" length="100" />
+        </property>
+        <property name="brandname" type="string">
+            <column name="brandname" length="100" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>
